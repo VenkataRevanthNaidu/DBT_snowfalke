@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
-with source_data as
+with payment_data as
 (
-    select * from {{source('raw','PAYMENTS')}}
+    select * from {{source('raw','payments') }}
 )
-select * from source_data
+select * from payment_datadata
